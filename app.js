@@ -3,7 +3,7 @@ document.getElementById("change").addEventListener("click",change);
 function change(){
     const xhr = new XMLHttpRequest();
 
-    xhr.open("GET","http://api.exchangeratesapi.io/v1/latest?access_key=5423b321b37db81cfe3a3d9cba6fb003&format=1",true);
+    xhr.open("GET","https://api.exchangerate.host/latest",true);
 
     xhr.onload = function(){
         
