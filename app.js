@@ -1,10 +1,11 @@
 document.getElementById("change").addEventListener("click",change);
 
+            
 function change(){
     const xhr = new XMLHttpRequest();
 
     xhr.open("GET","https://api.exchangerate.host/latest",true);
-
+    
     xhr.onload = function(){
         
 
@@ -12,9 +13,15 @@ function change(){
 
             
             const response = JSON.parse(this.responseText);
-            const rate = response.rates.TRY ;
+            const rateTr = response.rates.TRY ;
+            const rateEur = response.rates.EUR ;
+
             const amount = Number(document.getElementById("amount").value);
-            document.getElementById("tl").value = amount * rate;
+            document.getElementById("turkishliras").value = amount * rateTr;
+
+            document.getElementById("liveRateEur").textContent = rateEur;
+            document.getElementById("liveRateTr").textContent = rateTr;
+            
             
 
         }

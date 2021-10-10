@@ -16,15 +16,23 @@
 <body>
     <div class="container">
             <hr>
-            <label for = "amount">Euro</label>
-            <input type="number" id="amount" min="0">
-            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">€</span>
+                  <span class="input-group-text" id="liveRateEur">0.00</span>
+                </div>
+                <input type="number" class="form-control" id="amount" aria-label="Amount (to the nearest dollar)">
+            </div>
             <hr>
-            <label for = "tl">TL</label>
-            <input type="text" id="tl" >
-
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">₺</span>
+                  <span class="input-group-text" id="liveRateTr">0.00</span>
+                </div>
+                <input type="number" class="form-control" id="turkishliras" aria-label="Amount (to the nearest dollar)">
+            </div>
             <hr>
-            <button id = "change" class="btn btn-danger">Çevir</button>
+            <button id = "change" class="btn btn-secondary">Çevir</button>
 
     </div>
     
